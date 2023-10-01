@@ -1,25 +1,29 @@
+{% extends 'teamInfo/base.html' %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Хобі</title>
-    <link rel="stylesheet" href="{% static 'teamInfo/css/style.css' %}">
-</head>
-<body>
-    <header class="header1">
-        <a href="{% url 'main' %}">
-            <img id = "logo" src="{% static 'teamInfo/images/logo.png'%}" alt="">
-        </a>
-        <a href="{% url 'educ' %}" class="header-text">Освіта</a>
-        <a href="{% url 'ach' %}" class="header-text">Наші досягнення у програмуванні</a>
-        <a href="{% url 'hobby' %}" class="header-text">Хобі</a>
-        <a href="{% url 'leis' %}" class="header-text">Дозвілля</a>
-    </header>
+{% block main %}
+    <h1>Хобі</h1>
     
-    <main>
-        <h1>Хобі</h1>
-    </main>
-    <footer></footer>
-</body>
-</html>
+    <p>розробка додатків</p>
+    <p>розробка ігор на pygame</p>
+    <p>розробка сайтів та веб-додатків</p>
+    
+    
+    <style>
+        body{
+            background-color:rgb(54, 54, 75);
+        }
+        p{
+            color:white;
+            font-family: monospace;
+            font-size: 30px;
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            color:white;
+            font-family: monospace;
+            font-size: 40px;
+        }
+    </style>
+    
+{% endblock %}
